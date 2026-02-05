@@ -1,16 +1,17 @@
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>eGamingHQ Blog</title>
+<title>eGamingHQ – Esports Betting & Gaming News</title>
 <meta name="description" content="eGamingHQ provides esports betting guides, expert gaming news, odds analysis, and trusted reviews.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+/* ========== GLOBAL ========== */
 * {
   margin: 0;
   padding: 0;
@@ -19,18 +20,29 @@
 }
 
 body {
-  background: radial-gradient(circle at top, #151a3a, #080b17);
-  color: Green
+  background: radial-gradient(circle at top, #111111, #050505);
+  color: #e0e0e0;
   line-height: 1.6;
 }
 
-/* NAVBAR */
+/* PARROT GREEN */
+:root {
+  --green: #1eff00;
+}
+
+/* ALL HEADINGS */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--green);
+}
+
+/* ========== NAVBAR ========== */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 8%;
-  background: rgba(10, 14, 35, 0.9);
+  background: rgba(10, 10, 10, 0.95);
+  border-bottom: 1px solid #1f1f1f;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -39,24 +51,25 @@ header {
 .logo {
   font-size: 26px;
   font-weight: 700;
+  color: #ffffff;
 }
 
 .logo span {
-  color: #4da3ff;
+  color: var(--green);
 }
 
 nav a {
   margin-left: 24px;
-  color: #cfd6ff;
-  font-weight: 500;
+  color: #cfcfcf;
   text-decoration: none;
+  font-weight: 500;
 }
 
 nav a:hover {
-  color: #4da3ff;
+  color: var(--green);
 }
 
-/* HERO */
+/* ========== HERO ========== */
 .hero {
   padding: 120px 8%;
   text-align: center;
@@ -64,14 +77,11 @@ nav a:hover {
 
 .hero h1 {
   font-size: 46px;
-  margin-bottom: 16px;
-  background: linear-gradient(90deg, #4da3ff, #7afcff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin-bottom: 18px;
 }
 
 .hero p {
-  color: #b8c2ff;
+  color: #b5b5b5;
   max-width: 650px;
   margin: 0 auto 30px;
   font-size: 18px;
@@ -79,15 +89,19 @@ nav a:hover {
 
 .hero a {
   display: inline-block;
-  padding: 16px 34px;
-  background: linear-gradient(90deg, #4da3ff, #7afcff);
+  padding: 16px 36px;
+  background: var(--green);
   color: #000;
-  border-radius: 8px;
+  border-radius: 6px;
   font-weight: 700;
   text-decoration: none;
 }
 
-/* FEATURES */
+.hero a:hover {
+  background: #17d900;
+}
+
+/* ========== FEATURES ========== */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -96,27 +110,23 @@ nav a:hover {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 14px;
+  background: #141414;
+  border: 1px solid #222;
+  border-radius: 10px;
   padding: 32px;
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 40px rgba(77, 163, 255, 0.35);
-}
-
-.card h3 {
-  margin-bottom: 12px;
+  border-color: var(--green);
+  transform: translateY(-6px);
 }
 
 .card p {
-  color: #cdd3ff;
+  color: #bdbdbd;
 }
 
-/* CONTENT */
+/* ========== CONTENT ========== */
 .section {
   padding: 80px 8%;
 }
@@ -134,64 +144,55 @@ nav a:hover {
 }
 
 .post {
-  background: #0f1430;
+  background: #101010;
+  border: 1px solid #222;
   padding: 26px;
-  border-radius: 14px;
-  border: 1px solid rgba(77, 163, 255, 0.15);
-}
-
-.post h4 {
-  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 .post p {
-  color: #b7c0ff;
+  color: #b5b5b5;
 }
 
 .post a {
   display: inline-block;
   margin-top: 14px;
-  color: #4da3ff;
+  color: var(--green);
   font-weight: 600;
   text-decoration: none;
 }
 
-/* CTA */
+/* ========== CTA ========== */
 .cta {
   text-align: center;
   padding: 90px 8%;
-  background: linear-gradient(135deg, #10163b, #070a18);
-}
-
-.cta h2 {
-  font-size: 36px;
-  margin-bottom: 14px;
+  background: linear-gradient(135deg, #0a0a0a, #020202);
 }
 
 .cta p {
-  color: #cdd3ff;
+  color: #bdbdbd;
   margin-bottom: 26px;
 }
 
 .cta a {
-  padding: 16px 36px;
-  background: #ffffff;
+  padding: 16px 40px;
+  background: var(--green);
   color: #000;
   font-weight: 700;
-  border-radius: 8px;
+  border-radius: 6px;
   text-decoration: none;
 }
 
-/* FOOTER */
+/* ========== FOOTER ========== */
 footer {
   text-align: center;
   padding: 25px;
-  background: #050814;
-  color: #9aa3ff;
+  background: #030303;
+  color: #8f8f8f;
   font-size: 14px;
 }
 
-/* RESPONSIVE */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 36px;
@@ -203,8 +204,8 @@ footer {
 </style>
     <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="LnhmsFLyze6rNOLlTWO7Commy9U17yLRYZQVtFuMEtM" />
-</head>
 
+</head>
 <body>
 
 <header>
@@ -229,15 +230,15 @@ footer {
 
 <section class="features">
   <div class="card">
-    <h3>🎮 Esports Coverage</h3>
+    <h3>Esports Coverage</h3>
     <p>CS2, Valorant, LoL, Dota 2 & emerging competitive titles.</p>
   </div>
   <div class="card">
-    <h3>📊 Betting Insights</h3>
-    <p>Odds breakdowns, pro strategies, and risk-aware betting.</p>
+    <h3>Betting Insights</h3>
+    <p>Odds breakdowns, pro strategies, and responsible betting tips.</p>
   </div>
   <div class="card">
-    <h3>📰 Gaming News</h3>
+    <h3>Gaming News</h3>
     <p>Accurate updates without hype or misinformation.</p>
   </div>
 </section>
