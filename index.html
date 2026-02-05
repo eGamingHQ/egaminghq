@@ -8,7 +8,7 @@
 <title>eGamingHQ – Esports Betting & Gaming News</title>
 <meta name="description" content="eGamingHQ provides esports betting guides, expert gaming news, odds analysis, and trusted reviews.">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 
 <style>
 /* ========== GLOBAL ========== */
@@ -19,20 +19,19 @@
   font-family: 'Inter', sans-serif;
 }
 
+:root {
+  --green: #1eff00;
+}
+
 body {
   background: radial-gradient(circle at top, #111111, #050505);
   color: #e0e0e0;
   line-height: 1.6;
 }
 
-/* PARROT GREEN */
-:root {
-  --green: #1eff00;
-}
-
 /* ALL HEADINGS */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--white);
+  color: var(--green);
 }
 
 /* ========== NAVBAR ========== */
@@ -48,16 +47,32 @@ header {
   z-index: 10;
 }
 
-.logo {
-  font-size: 26px;
-  font-weight: 700;
-  color: #ffffff;
+/* LOGO */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.logo span {
+.logo-main {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 1px;
   color: var(--green);
+  text-transform: uppercase;
+  text-shadow: 0 0 8px rgba(30, 255, 0, 0.6);
 }
 
+.logo-sub {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  color: #ffffff;
+  opacity: 0.9;
+  text-transform: uppercase;
+}
+
+/* NAV LINKS */
 nav a {
   margin-left: 24px;
   color: #cfcfcf;
@@ -202,6 +217,7 @@ footer {
   }
 }
 </style>
+
     <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="LnhmsFLyze6rNOLlTWO7Commy9U17yLRYZQVtFuMEtM" />
 
@@ -209,7 +225,11 @@ footer {
 <body>
 
 <header>
-  <div class="logo">eGaming<span>HQ</span></div>
+  <div class="logo-container">
+    <span class="logo-main">EGHQ</span>
+    <span class="logo-sub">GAMING HQ</span>
+  </div>
+
   <nav>
     <a href="#">Home</a>
     <a href="#">Betting Guides</a>
