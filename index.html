@@ -1,17 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>EGamingHQ Esports Betting</title>
-<meta name="description" content="eGamingHQ provides esports betting guides, expert gaming news, odds analysis, and trusted reviews.">
+<title>EGamingHQ – Ultimate Esports Betting Hub</title>
+<meta name="description" content="Trusted esports betting guides, bonuses, odds analysis, and gaming news.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 
 <style>
-/* ========== GLOBAL ========== */
+:root {
+  --green: #1eff00;
+  --bg-dark: #050505;
+  --card: #111;
+  --border: #1f1f1f;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,60 +24,31 @@
   font-family: 'Inter', sans-serif;
 }
 
-:root {
-  --green: #1eff00;
-}
-
 body {
-  background: radial-gradient(circle at top, #111111, #050505);
+  background: radial-gradient(circle at top, #111, #050505);
   color: #e0e0e0;
-  line-height: 1.6;
 }
 
-/* ALL HEADINGS */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--white);
-}
-
-/* ========== NAVBAR ========== */
+/* ================= HEADER ================= */
 header {
+  padding: 18px 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 8%;
-  background: rgba(10, 10, 10, 0.95);
-  border-bottom: 1px solid #1f1f1f;
+  background: rgba(0,0,0,0.95);
+  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
-/* LOGO */
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logo-main {
-  font-size: 34px;
+.logo {
+  font-size: 30px;
   font-weight: 900;
-  letter-spacing: 1px;
   color: var(--green);
-  text-transform: uppercase;
-  text-shadow: 0 0 8px rgba(30, 255, 0, 0.6);
+  letter-spacing: 1px;
 }
 
-.logo-sub {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1.6px;
-  color: #ffffff;
-  opacity: 0.9;
-  text-transform: uppercase;
-}
-
-/* NAV LINKS */
 nav a {
   margin-left: 24px;
   color: #cfcfcf;
@@ -84,113 +60,25 @@ nav a:hover {
   color: var(--green);
 }
 
-/* ========== HERO ========== */
+/* ================= HERO ================= */
 .hero {
-  padding: 120px 8%;
+  padding: 120px 8% 80px;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 46px;
-  margin-bottom: 18px;
+  font-size: 48px;
+  margin-bottom: 16px;
 }
 
 .hero p {
-  color: #b5b5b5;
-  max-width: 650px;
+  max-width: 700px;
   margin: 0 auto 30px;
+  color: #bdbdbd;
   font-size: 18px;
 }
 
 .hero a {
-  display: inline-block;
-  padding: 16px 36px;
-  background: var(--green);
-  color: #000;
-  border-radius: 6px;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.hero a:hover {
-  background: #17d900;
-}
-
-/* ========== FEATURES ========== */
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  padding: 80px 8%;
-}
-
-.card {
-  background: #141414;
-  border: 1px solid #222;
-  border-radius: 10px;
-  padding: 32px;
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  border-color: var(--green);
-  transform: translateY(-6px);
-}
-
-/* Paragraph text inside card */
-.card p {
-  color: #bdbdbd;
-}
-
-/* ========== CONTENT ========== */
-.section {
-  padding: 80px 8%;
-}
-
-.section h2 {
-  text-align: center;
-  font-size: 34px;
-  margin-bottom: 50px;
-}
-
-.posts {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 26px;
-}
-
-.post {
-  background: #101010;
-  border: 1px solid #222;
-  padding: 26px;
-  border-radius: 10px;
-}
-
-.post p {
-  color: #b5b5b5;
-}
-
-.post a {
-  display: inline-block;
-  margin-top: 14px;
-  color: var(--green);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-/* ========== CTA ========== */
-.cta {
-  text-align: center;
-  padding: 90px 8%;
-  background: linear-gradient(135deg, #0a0a0a, #020202);
-}
-
-.cta p {
-  color: #bdbdbd;
-  margin-bottom: 26px;
-}
-
-.cta a {
   padding: 16px 40px;
   background: var(--green);
   color: #000;
@@ -199,98 +87,174 @@ nav a:hover {
   text-decoration: none;
 }
 
-/* ========== FOOTER ========== */
-footer {
+.hero a:hover {
+  background: #17d900;
+}
+
+/* ================= GAME BAR ================= */
+.game-bar {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding: 40px 8%;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.game {
+  color: var(--green);
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+/* ================= BROWSE BY GAME ================= */
+.section {
+  padding: 80px 8%;
   text-align: center;
+}
+
+.section h2 {
+  font-size: 34px;
+  margin-bottom: 50px;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 28px;
+}
+
+.game-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 30px 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.game-card:hover {
+  border-color: var(--green);
+  transform: translateY(-6px);
+}
+
+.game-card span {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* ================= BONUSES ================= */
+.bonuses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.bonus-card {
+  background: var(--card);
+  border: 2px solid var(--green);
+  padding: 34px;
+  border-radius: 12px;
+}
+
+.bonus-card h3 {
+  margin-bottom: 14px;
+}
+
+.bonus-card p {
+  color: #bdbdbd;
+  margin-bottom: 20px;
+}
+
+.bonus-card a {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--green);
+  color: #000;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* ================= FOOTER ================= */
+footer {
   padding: 25px;
-  background: #030303;
+  text-align: center;
+  background: #020202;
   color: #8f8f8f;
   font-size: 14px;
 }
 
-/* ========== RESPONSIVE ========== */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 36px;
-  }
-  nav {
-    display: none;
-  }
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+  nav { display:none; }
+  .hero h1 { font-size: 36px; }
+}
 </style>
-
-    <!-- Google Search Console Verification -->
-  <meta name="google-site-verification" content="LnhmsFLyze6rNOLlTWO7Commy9U17yLRYZQVtFuMEtM" />
-
 </head>
+
 <body>
 
 <header>
-  <div class="logo-container">
-    <span class="logo-main">EGHQ</span></font>
-    <span class="logo-sub">GAMING HQ</span>
-  </div>
-
+  <div class="logo">EGHQ</div>
   <nav>
     <a href="#">Home</a>
-    <a href="https://www.egaminghq.com/guides/">Betting Guides</a>
-    <a href="https://www.egaminghq.com/esports-world-cup/">Esports</a>
+    <a href="/guides/">Betting Guides</a>
+    <a href="/esports-world-cup/">Esports</a>
     <a href="#">Blog</a>
     <a href="mailto:admin@egaminghq.com">Contact</a>
   </nav>
 </header>
-  <h1>Level Up Your Esports Games</h1>
-  <p>
-    Trusted esports guides, smart strategies and real-time gaming insights
-    all in one place.
-  </p>
- Explore Betting Guides
-  </div>
+
+<section class="hero">
+  <h1>Ultimate Esports Betting Hub</h1>
+  <p>Expert esports betting guides, trusted bonuses, and smart strategies — all in one place.</p>
+  <a href="/guides/">Explore Betting Guides</a>
 </section>
 
-<section class="features">
-  <div class="card">
-    <h3>Esports Coverage</h3>
-    <p>CS2, Valorant, LoL, Dota 2 & emerging competitive titles.</p>
-  </div>
-  <div class="card">
-    <h3>League</h3>
-    <p>Odds breakdowns, pro strategies and responsible tips.</p>
-  </div>
-  <div class="card">
-    <h3>Gaming News</h3>
-    <p>Accurate updates without hype or misinformation.</p>
+<div class="game-bar">
+  <div class="game">CS2</div>
+  <div class="game">VALORANT</div>
+  <div class="game">DOTA 2</div>
+  <div class="game">LEAGUE OF LEGENDS</div>
+  <div class="game">PUBG</div>
+</div>
+
+<section class="section">
+  <h2>Browse by Game</h2>
+  <div class="game-grid">
+    <div class="game-card"><strong>CS2</strong><span>Betting Guide</span></div>
+    <div class="game-card"><strong>Valorant</strong><span>Odds & Tips</span></div>
+    <div class="game-card"><strong>Dota 2</strong><span>Pro Markets</span></div>
+    <div class="game-card"><strong>LoL</strong><span>Esports Picks</span></div>
+    <div class="game-card"><strong>PUBG</strong><span>Safe Betting</span></div>
   </div>
 </section>
 
 <section class="section">
-  <h2>Latest From eGamingHQ</h2>
-  <div class="posts">
-    <div class="post">
-      <h4>Rocket League Esports Betting Guide</h4>
-      <p>Learn how markets work and where to find value bets.</p>
-      <a href="https://www.egaminghq.com/esport-game/rocket-league/">Read More →</a>
+  <h2>Top Esports Bonuses</h2>
+  <div class="bonuses">
+    <div class="bonus-card">
+      <h3>GG.BET</h3>
+      <p>Up to $500 Esports Bonus</p>
+      <a href="#">Claim Bonus</a>
     </div>
-    <div class="post">
-      <h4>StarCraft II Betting Explained</h4>
-      <p>Beginner-friendly strategies with advanced insights.</p>
-      <a href="https://www.egaminghq.com/esport-game/starcraft-ii/">Read More →</a>
+    <div class="bonus-card">
+      <h3>ThunderPick</h3>
+      <p>Crypto Friendly Betting</p>
+      <a href="#">Get Started</a>
     </div>
-    <div class="post">
-      <h4>PUBG Esports Betting Guide</h4>
-      <p>Safe PUBG esports betting explained for new players.</p>
-      <a href="https://www.egaminghq.com/esport-game/pubg/">Read More →</a>
+    <div class="bonus-card">
+      <h3>Rivalry</h3>
+      <p>Esports-First Betting Platform</p>
+      <a href="#">Join Now</a>
     </div>
   </div>
 </section>
 
-<section class="cta">
-  <h2>Stay Ahead of the Game</h2>
-  <p>Get smarter about esports betting with expert-backed content.</p>
-  <a href="https://www.egaminghq.com/">Join eGamingHQ</a>
-</section>
-
 <footer>
-  © 2026 eGamingHQ.com — All Rights Reserved
+  © 2026 EGamingHQ.com — All Rights Reserved
 </footer>
 
 </body>
